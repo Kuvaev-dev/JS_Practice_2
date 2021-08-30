@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Homework 2</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+    <script>
+        class Car{
+            // Создаём конструктор с параметрами автомобиля
+            constructor(manufacturer, model, issueAge, distance, speed){
+                this.manufacturer = manufacturer;
+                this.model = model;
+                this.issueAge = issueAge;
+                this.distance = distance;
+                this.speed = speed;
+            }
+            // Создаём метод для подсчёта скорости с учётом остановок
+            GetTime(distance, speed){
+                var allTime = distance / speed
+                var time = allTime - Math.round(allTime / 4)
+                alert("Время: " + time + " ч.");
+            }
+            // Создаём метод получения информации
+            GetInfo(){
+                alert(
+                    "Производитель: " +
+                    manufacturer +
+                    "\nMодель: " +
+                    model +
+                    "\nГод выпуска: " +
+                    issueAge +
+                    "\nСредняя скорость: " +
+                    parseInt(speed) +
+                    " км/ч"
+                )
+            }
+        }
+        // Получаем все наши значения 
+        var manufacturer = prompt("Введите производителя автомобиля: ", "Lexus");
+        var model = prompt("Введите модель автомобиля: ", "40LT53S");
+        var issueAge = prompt("Введите год выпуска: ", "1980");
+        var distance = prompt("Введите расстояние: ", "20");
+        var speed = prompt("Введите среднюю скорость автомобиля: ", "40");
+        // Создаём объект класса и заполняем его входными параметрами
+        var car = new Car(manufacturer, model, issueAge, distance, speed);
+        // Вызывем методы
+        car.GetInfo()
+        car.GetTime(distance, speed);
+    </script>
+</body>
+</html>

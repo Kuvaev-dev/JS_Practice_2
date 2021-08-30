@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Homework 2</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+    <h6>НЕ СТАВЬТЕ < 7(((</h6>    
+    <script>
+        // Насколько я понял, должна быть одна дробь и нужно сложить две одинаковые.
+        // Если не так, то сообщите.
+        class Math{
+            addition(nominator, denominator) {
+                let sum = (nominator / denominator) + (nominator / denominator);
+                alert("Сумма двух дробей: " + parseFloat(sum));
+            }
+            subtruction(nominator, denominator) {
+                let subtr = (nominator / denominator) - (nominator / denominator);
+                alert("Разность двух дробей: " + parseFloat(subtr));
+            }
+            product(nominator, denominator) {
+                let product = (nominator / denominator) * (nominator / denominator);
+                alert("Произведение двух дробей: " + parseFloat(product));
+            }
+            division(nominator, denominator) {
+                let div = (nominator / denominator) / (nominator / denominator);
+                alert("Частное двух дробей: " + parseFloat(div));
+            }
+        }
+        var nominator, denominator;
+        var math = new Math();
+        nominator = prompt("Введите числитеь дроби: ");
+        denominator = prompt("Введите знаменатель дроби: ");
+        math.addition(nominator, denominator);
+        math.subtruction(nominator, denominator);
+        math.division(nominator, denominator);
+        math.product(nominator, denominator);
+    </script>
+</body>
+</html>
